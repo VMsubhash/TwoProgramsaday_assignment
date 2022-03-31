@@ -36,11 +36,11 @@ void output(int a, int b, int c, int isscalene)
 int main()
 {
   printf("This program is to check if a triangle is scalene\n");
-  int a,b,c,isscalene;
+  int a,b,c,scalene;
   a= input_side();
   b=input_side();
   c=input_side();
-  isscalene=check_scalene(a, b, c);
-  output(a,b,c,isscalene);
+  scalene=check_scalene(a, b, c);
+  output(a,b,c,scalene);
   return 0;
 }
