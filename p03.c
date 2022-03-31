@@ -9,7 +9,7 @@ int input_number()
 int is_composite(int n)
 {
   int i,c=0;
-  for (i=2;i<n;i++)
+  for (;i<n;i++)
     {
       if (n%i==0)
       {

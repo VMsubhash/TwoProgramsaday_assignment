@@ -1,6 +1,6 @@
 #include<stdio.h>
 void input(float *base,float *height)
-}
+{
   printf("enter the lengths in the format base height\n");
   scanf("%f %f",base,height);
 }

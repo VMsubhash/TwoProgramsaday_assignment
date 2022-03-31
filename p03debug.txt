@@ -1,1 +1,78 @@
 
+ gcc -g p03.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x83f: file p03.c, line 36.
+(gdb) r
+Starting program: /home/runner/TwoProgramsadayassignment/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p03.c:36
+36    n = input_number();
+(gdb) s
+input_number () at p03.c:3
+3   {
+(gdb) n
+5     printf("enter a number\n");
+(gdb) n
+enter a number
+6     scanf("%d",&x);
+(gdb) n
+5
+7     return x;
+(gdb) n
+8   }
+(gdb) n
+main () at p03.c:37
+37    c = is_composite(n);
+(gdb) s
+is_composite (n=5) at p03.c:11
+11    int i,c=0;
+(gdb) n
+12    for (;i<n;i++)
+(gdb) n
+20    return c;
+(gdb) n
+21  }
+(gdb) n
+main () at p03.c:38
+38    output(n,c);
+(gdb) s
+output (n=5, composite=0) at p03.c:24
+24    if (composite==1)
+(gdb) n
+30      printf("%d is a prime number\n",n);
+(gdb) n
+5 is a prime number
+32  }
+(gdb) n
+main () at p03.c:39
+39    return 0;
+(gdb) n
+40  }(gdb) n
+__libc_start_main (main=0x55f5b7000837 <main>, argc=1, argv=0x7ffc6fe51b88, 
+    init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, 
+    stack_end=0x7ffc6fe51b78) at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) q
+A debugging session is active.
+
+    Inferior 1 [process 737] will be killed.
+
+Quit anyway? (y or n) y
+ 
